@@ -5,6 +5,7 @@ Virtual file system to provide virtualized PostgreSQL password file with embedde
 
 [About](#about)<br/>
 [Before you begin](#before-you-begin)<br/>
+[Install](#install)<br/>
 [Configure](#configure)<br/>
 [Run](#run)<br/>
 [Disclaimers](#disclaimers)<br/>
@@ -34,11 +35,20 @@ To run this app, you need the following prerequisites.
 **Prerequisites:**
 
 1. Microsoft .NET Framework 4.0
-2. Dokan library installed. Download [here](https://github.com/dokan-dev/dokany/releases/tag/v1.5.0.3000).
+2. Dokan library installed.
+
+<a name=install></a>
+
+## Install
+
+1. Download and install [Dokan](https://github.com/dokan-dev/dokany/wiki/Installation).
+2. Download and extract zip package from the latest release.
 
 <a name=configure></a>
 
 ## Configure
+
+Create .yml file based on template below.
 
 ```yaml
 
