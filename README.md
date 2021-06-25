@@ -36,6 +36,7 @@ To run this app, you need the following prerequisites.
 
 1. Microsoft .NET Framework 4.0
 2. Dokan library installed.
+3. Minimum libpq.dll version 13.3
 
 <a name=install></a>
 
@@ -90,6 +91,8 @@ files:
 pgAzureADPass config.yml
 
 ```
+
+To try it out with pgAdmin 4 bump psycopg2 dependency to [2.9](https://pypi.org/project/psycopg2/). Alternatively you could download [patched version](https://pgdowloads.blob.core.windows.net/share/pgAdmin%204-py39.zip).
 
 <a name=disclaimers></a>
 
