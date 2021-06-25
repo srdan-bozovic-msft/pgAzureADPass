@@ -21,13 +21,11 @@ namespace AzureADPgPass.PgPass
             string database,
             int? port,
             string user,
-            string clientId) : base(name, host, database, port)
+            string clientId) : base(name, host, database, port, user)
         {
-            User = user;
             ClientId = clientId;
         }
 
-        public string User { get; private set; }
         public string ClientId { get; private set; }
 
         protected override string GetToken()
@@ -65,9 +63,9 @@ namespace AzureADPgPass.PgPass
             }
         }
 
-        protected override string GetUser(string token)
+        protected override string GetUserNameFromToken(string token)
         {
-            return User;
+            return "*";
         }
     }
 }

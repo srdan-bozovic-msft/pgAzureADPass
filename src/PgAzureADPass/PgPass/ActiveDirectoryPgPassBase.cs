@@ -13,10 +13,11 @@ namespace AzureADPgPass.PgPass
     {
         public ActiveDirectoryPgPassBase(
             string name,
-            string host,
+            string hostName,
             string database,
             int? port,
-            string tenantId) : base(name, host, database, port)
+            string userName,
+            string tenantId) : base(name, hostName, database, port, userName)
         {
             var clientId = "1950a258-227b-4e31-a9cf-717495945fc2";
             App = PublicClientApplicationBuilder.Create(clientId)
@@ -74,7 +75,7 @@ namespace AzureADPgPass.PgPass
             }
         }
 
-        protected override string GetUser(string token)
+        protected override string GetUserNameFromToken(string token)
         {
             try
             {

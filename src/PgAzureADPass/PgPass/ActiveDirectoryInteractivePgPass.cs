@@ -11,10 +11,11 @@ namespace AzureADPgPass.PgPass
     {
         public ActiveDirectoryInteractivePgPass(
             string name,
-            string host,
+            string hostName,
             string database,
             int? port,
-            string tenantId) : base(name, host, database, port, tenantId)
+            string userName,
+            string tenantId) : base(name, hostName, database, port, userName, tenantId)
         {
 
         }

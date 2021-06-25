@@ -91,13 +91,13 @@ namespace AzureADPgPass
                     case "activedirectoryinteractive":
                         items.Add(
                             new ActiveDirectoryInteractivePgPass(
-                                file.Name, file.HostName, file.Database, file.Port, file.TenantId
+                                file.Name, file.HostName, file.Database, file.Port, file.UserName, file.TenantId
                             ));
                         break;
                     case "activedirectoryintegrated":
                         items.Add(
                             new ActiveDirectoryIntegratedPgPass(
-                                file.Name, file.HostName, file.Database, file.Port, file.TenantId
+                                file.Name, file.HostName, file.Database, file.Port, file.UserName, file.TenantId
                             ));
                         break;
                     default:
