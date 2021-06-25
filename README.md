@@ -43,7 +43,7 @@ To run this app, you need the following prerequisites.
 ## Install
 
 1. Download and install [Dokan](https://github.com/dokan-dev/dokany/wiki/Installation).
-2. Download and extract zip package from the latest release.
+2. Download and extract zip package from the [latest release](https://github.com/srdan-bozovic-msft/pgAzureADPass/releases/).
 
 <a name=configure></a>
 
