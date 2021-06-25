@@ -94,7 +94,7 @@ pgAzureADPass config.yml
 <a name=disclaimers></a>
 
 ## Disclaimers
-The scripts and this guide are copyright Microsoft Corporations and are provided as samples. They are not part of any Azure service and are not covered by any SLA or other Azure-related agreements. They are provided as-is with no warranties express or implied. Microsoft takes no responsibility for the use of the scripts or the accuracy of this document. Familiarize yourself with the scripts before using them.
+The app and this guide are provided as-is with no warranties express or implied. Familiarize yourself with the app before using it.
 
 <a name=related-links></a>
 
