@@ -74,19 +74,5 @@ namespace AzureADPgPass.PgPass
                 AutoResetEvent.Set();
             }
         }
-
-        protected override string GetUserNameFromToken(string token)
-        {
-            try
-            {
-                var jwt = new JwtSecurityToken(token);
-                var upn = jwt.Payload.Claims.FirstOrDefault(c => c.Type == "upn")?.Value;
-                return $"{upn}@{Server}";
-            }
-            catch (Exception e)
-            {
-                return $"## User not found ##";
-            }
-        }
     }
 }

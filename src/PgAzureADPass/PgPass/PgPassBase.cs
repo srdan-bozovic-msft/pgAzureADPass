@@ -16,17 +16,16 @@ namespace AzureADPgPass.PgPass
             string userName)
         {
             Name = name;
-            HostName = hostName;
-            Database = string.IsNullOrEmpty(database) ? "postgres" : database;
-            Port = port.HasValue ? port.Value : 5432;
-            UserName = userName;
+            HostName = string.IsNullOrEmpty(hostName) ? "*" : hostName;
+            Database = string.IsNullOrEmpty(database) ? "*" : database;
+            Port = port.HasValue ? port.Value.ToString() : "*";
+            UserName = string.IsNullOrEmpty(userName) ? "*" : userName;
         }
 
         public string Name { get; private set; }
         public string HostName { get; private set; }
-        public string Server => HostName.Split('.').First();
         public string Database { get; private set; }
-        public int Port { get; private set; }
+        public string Port { get; private set; }
         public string UserName { get; private set; }
 
         public string FileName => $"{Name}.pgpass";
@@ -34,14 +33,9 @@ namespace AzureADPgPass.PgPass
 
         public string GetContent()
         {
-            var token = GetToken();
-            var userName = string.IsNullOrEmpty(UserName) ? GetUserNameFromToken(token) : UserName;
-            return $"{HostName}:{Port}:{Database}:{userName}:{token}";
+            return $"{HostName}:{Port}:{Database}:{UserName}:{GetToken()}";
         }
 
-
         protected abstract string GetToken();
-
-        protected abstract string GetUserNameFromToken(string token);
-    }
+   }
 }

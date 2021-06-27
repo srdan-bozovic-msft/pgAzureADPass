@@ -55,13 +55,6 @@ namespace AzureADPgPass.Configuration
                 return false;
             }
 
-            var hostName = file.HostName;
-            if (string.IsNullOrEmpty(hostName))
-            {
-                Console.WriteLine($"{name}: HostName is required property.");
-                return false;
-            }
-
             var authentication = file.Authentication;
             if (string.IsNullOrEmpty(authentication))
             {
@@ -99,15 +92,6 @@ namespace AzureADPgPass.Configuration
 
         private static bool ValidateActiveDirectoryManagedIdentity(Config.PgPass file)
         {
-            var name = file.Name;
-
-            var userName = file.UserName;
-            if (string.IsNullOrEmpty(userName))
-            {
-                Console.WriteLine($"{name} UserName is required property.");
-                return false;
-            }
-
             return true;
         }
 

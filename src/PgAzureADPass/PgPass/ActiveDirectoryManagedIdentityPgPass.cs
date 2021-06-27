@@ -62,10 +62,5 @@ namespace AzureADPgPass.PgPass
                 }
             }
         }
-
-        protected override string GetUserNameFromToken(string token)
-        {
-            return "*";
-        }
     }
 }
