@@ -57,28 +57,18 @@ volumeLabel: AAD Demo pgPass
 driveLetter: P
 files: 
     - name: active-directory-uami
-      hostName: <server>.postgres.database.azure.com
       authentication: ActiveDirectoryManagedIdentity
-      database: postgres
-      userName: <user>@<server>
       clientId: <client-id>
 
     - name: active-directory-sami
-      hostName: <server>.postgres.database.azure.com
       authentication: ActiveDirectoryManagedIdentity
-      database: postgres
-      userName: <user>@<server>
 
     - name: active-directory-interactive 
-      hostName: <server>.postgres.database.azure.com
       authentication: ActiveDirectoryInteractive
-      database: postgres
       tenantId: <tenant-id>
 
     - name: active-directory-integrated
-      hostName: <server>.postgres.database.azure.com
       authentication: ActiveDirectoryIntegrated
-      database: postgres
       tenantId: <tenant-id>
 
 ```
