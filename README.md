@@ -1,5 +1,5 @@
 # pgAzureADPass
-Virtual file system to provide virtualized PostgreSQL password file with embedded Azure AD tokens instead of passwords
+Virtual file system to provide PostgreSQL password files with just-in-time acquired Azure AD tokens instead of passwords
 
 ### Contents
 
