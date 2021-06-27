@@ -1,0 +1,29 @@
+﻿volumeLabel: AAD Demo pgPass
+driveLetter: P
+files: 
+    - name: active-directory-uami
+      hostName: "*"
+      authentication: ActiveDirectoryManagedIdentity
+      database: "*"
+      userName: "*"
+      clientId: e93cc508-1a65-45d3-8420-d34e6eafc6a7
+
+    - name: active-directory-sami
+      hostName: "*"
+      authentication: ActiveDirectoryManagedIdentity
+      database: "*"
+      userName: "*"
+
+    - name: aaddemopg-active-directory-interactive 
+      hostName: aaddemopg.postgres.database.azure.com
+      authentication: ActiveDirectoryInteractive
+      database: "*"
+      userName: "*"
+      tenantId: 72f988bf-86f1-41af-91ab-2d7cd011db47
+
+    - name: aaddemopg-active-directory-integrated
+      hostName: "*"
+      authentication: ActiveDirectoryIntegrated
+      database: "*"
+      userName: "*"
+      tenantId: 72f988bf-86f1-41af-91ab-2d7cd011db47
