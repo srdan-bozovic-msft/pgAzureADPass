@@ -82,7 +82,7 @@ pgAzureADPass config.yml
 
 ```
 
-To try it out with pgAdmin 4 bump psycopg2 dependency to [2.9](https://pypi.org/project/psycopg2/). Alternatively you could download [patched version](https://pgdowloads.blob.core.windows.net/share/pgAdmin%204-py39.zip).
+To try it out with pgAdmin 4 use the latest [daily snapshot](https://www.postgresql.org/ftp/pgadmin/pgadmin4/snapshots/).
 
 <a name=disclaimers></a>
 
